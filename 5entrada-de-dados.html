@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Entrada de dados</title>
+</head>
+<body>
+
+ 
+  <label for="">Digite os celsius</label>
+  <input type="text" id="graus">
+  <button onclick="converter()">Calcular</button>
+
+  <p id="resultado"></p>
+    
+  <script>
+    function converter()
+    {
+      let graus = parseFloat(document.getElementById('graus').value);
+      let converter = (graus * 9/5) + 32;
+
+      let resultado = document.getElementById('resultado')
+      resultado.innerText = converter
+    }
+  </script>
+</body>
+</html>
