@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Laço de repetição</title>
+</head>
+
+<body>
+    <script>
+        console.log('passo 1')
+        console.log('passo 2')
+        console.log('passo 3')
+        console.log('passo 4')
+        console.log('passo 5')
+        console.log('passo 6')
+        console.log('passo 7')
+        console.log('passo 8')
+        console.log('passo 9')
+        console.log('passo 10')
+
+        console.log('-----------')
+
+
+        // for = para
+        for(let i=1;i<=10;i++) { // i++ =  i = i+1 
+            console.log('Passo ' + i)
+        }
+
+
+
+        for(let i=10;i>=1;i--) { // i-- =  i-1 
+            console.log('Passo ' + i)
+        }
+
+        let num = parseInt(prompt('digite um numero'))
+
+        for(let i=0;i<=10;i++){
+            //  console.log(i + ' x ' + num + ' = ' +  i * num)
+             console.log(`${i} x ${num} = ${i*num}`)
+     
+        }
+
+        // entrada de dados sendo '+' '-' 'x' '/'
+
+        // condicional '+' '-' 'x' '/'
+
+        // entrada de dados num
+
+        // 0 - 10
+        // 0 * 10
+        // 0 + 10
+        // 0 / 10
+
+        // while
+        let i = 0
+        while(i<=10){
+            
+            console.log('laço while' + 1);
+
+            i++
+        }
+
+        //do while = faça enquanto
+        i = 0
+        do{
+            console.log('laço while' + 1);
+            i ++
+        }while(i <=10)
+
+
+        let lista = [0,1,2,3,4,5,6,7,8,9,10, "Luis",false]
+
+        console.log(lista)
+        console.log(lista[12])
+
+        // forEach
+
+        lista.forEach(
+            function(e) {
+             console.log(e)
+            }
+        )
+
+
+       
+        
+    </script>
+</body>
+
+</html>
