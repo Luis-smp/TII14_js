@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>att2</title>
+</head>
+<body>
+
+    <label for="">Digite o primeiro numero</label> <br>
+    <input type="text" id="nmr1"> <br>
+    <label for="">Digite o primeiro Segundo</label> <br>
+    <input type="text" id="nmr2"> <br>
+    <label for="">Digite o primeiro Terceiro</label> <br>
+    <input type="text" id="nmr3"> <br>
+    <button onclick="empate()">Verificar</button>
+
+    <p id="resultado"></p>
+
+<script>
+
+
+    function empate()
+    {
+
+    
+        let nmr1 = document.getElementById('nmr1').value
+        let nmr2 = document.getElementById('nmr2').value
+        let nmr3 = document.getElementById('nmr3').value
+        
+
+
+        if (nmr1 == nmr2 || nmr2 == nmr3 || nmr3 == nmr1 ) {
+            console.log('Empate');
+            } else if (nmr1 > nmr2 && nmr1 > nmr3) {
+            console.log('numero 1 maior');
+            } else if (nmr2 > nmr1 && nmr2 > nmr3) {
+            console.log('numero 2 maior');
+            } else if (nmr3 > nmr1 && nmr3 > nmr2) {
+            console.log('numero 3 maior');
+           
+        }
+
+       
+      
+    }
+  </script>
+</body>
+</html>
