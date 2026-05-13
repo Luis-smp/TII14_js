@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // o que é array
+
+        // Um array é uma estrutura de dados que permite armazenar múliplos valores em única variável. Em JavaScript, arrays são objetos especiais que armazenam elementos de forma indexada, começando do índice 0.
+
+        // const frutas = ['Maça', 'Banana', 'Uva', 'Laranja'];
+        // console.log(frutas[0]);
+
+        // const nomes = new Array('Diego', 'Felipe', 'João', 'Bruno', 'Kauan');
+        // console.log(nomes[1]);
+
+        // const misto = [1, 'Jhenny', true, {nome: 'Felipe', idade: 17}, [5,4,3,2,1,0]];
+        // console.log(misto[4][1]);
+
+
+        // let matriz = [
+        //     [1, 2, 3],
+        //     [4, 5, [5,4,3,2,1,0]],
+        //     [7, 8, 9],
+        //     ["diego"]
+        // ];
+
+        // console.log(matriz[1][2][1]);
+
+        // let numeros = [2, 6, 9, 5, 6, 26];
+        // // console.log(numeros.length);
+        // var texto = 'Olá, Mundo!';
+        // // console.log(texto[3]);
+        // // console.log(texto.length);
+
+        // for(i = 0; i < texto.length; i++) {
+        //     console.log(texto[i]);
+
+        //     if(texto[i] == '!') {
+        //         console.log('Posicao ' + (i + 1))
+        //     }
+        // }
+
+        //preencher um array
+
+        // let lista = [];
+
+        // //escolher quantidade de posições do array
+
+        // //pedir para o usuario preencher o array
+
+        // let quanti = parseInt(prompt("Escolha a quantidade de números: "));
+
+        // for (i = 1; i <= quanti; i++) {
+        //     let info = parseInt(prompt(`Digite a ${i}º informação:`));
+        //     lista.push(info);
+
+        // }
+
+        // for (i = 0; i < quanti; i++) {
+        //     console.log(lista[i]);
+        // }
+
+        //converter o array em straing
+        //o metodo toString() converter um array em uma string,
+        //  separando os elementos por virgula
+
+        // const fruits = ['Orange', 'Apple', 'Mango']
+
+        // console.log(fruits);
+        // console.log(fruits.toString());
+
+        // // O metodo join() tambem converte um arra em uma string, mas permite
+        // //  especificar o separador
+
+        // console.log(fruits.join('   '));
+
+        // numeros = [40, 100, 1, 5, 25, 10]
+
+        //ordenar array
+
+        //o metodo sort() ordena os elementos de um array
+        //alfabeticamente ou numericamente.
+
+        //o metodo sort() altera o array original e retorna o array ordenado
+        //por padrao, a ordenaçao e feta em ordem alfabetica cresente.
+        // Para ordenar numericamente, é necessário passar por uma função de
+        //comparação como argumento.
+        // A função de comparação recebe dois parâmetros (a e b) e retorna um
+        //valor negativo, positivo ou zero, dependendo da comparação ente a e b.
+        // Se a função de comparação retornar um valor negativo, a ordenação
+        //será feita em ordem crescente.
+        // Se a função de comparação retornar um valor positivo, a ordenação
+        //será feita em ordem decrescente.
+        // Se a função de comparação retornar zero, os elementos permanecerão
+        //inalterados.
+
+        // numeros.sort((a, b) => a - b) // ordena de forma crescente
+        // console.log(numeros)
+
+        // frutas = ['banana', 'Maça', 'laranja', 'Uva']
+        
+        // console.log(frutas)
+        // console.log(frutas.sort())
+        // console.log(frutas.sort((a,b) => a.localeCompare(b)))
+
+        // const Animais = ['Macaco', 'Leao', 'Cachorro', 'Morcego']
+        // console.log(Animais[0])
+        // console.log(Animais.length)
+        // console.log(Animais[Animais.length - 1])
+
+
+        // adicionando e removendo elementos de um array
+
+        // adicionando elemento
+        // exisem dois tipos de metodos principais para adicionar elementos a um array
+
+        // metodo push()
+
+        // let frutas = ['banana', 'Maça', 'laranja', 'Uva'];
+        // console.log(frutas)
+
+        // console.log(frutas.push('Manga'))
+        // console.log(frutas)
+
+        // frutas.unshift('Morango')
+        // console.log(frutas[0])
+
+        // //remove o final
+        // frutas.pop();
+        // console.log(frutas)
+
+        // //remove o inicio
+        // frutas.shift();
+        // console.log(frutas)
+
+        // let Animais = ['Macaco', 'Leao', 'Cachorro', 'Morcego']
+
+        // for(i = 0; i < Animais.length; i++){
+        //     console.log(Animais[1])
+        // }
+        // console.log('--------------')
+
+        // //usando o laço de repeticao For of
+        // for(animal of Animais){
+        //     console.log(animal)
+        // }
+        // console.log('--------------')
+
+
+        // //usando o laço de repetição ForEach
+        // Animais.forEach(Animais => console.log(Animais))
+        
+
+        // //metodos uteis para manipular arrays
+
+        // //indexOf = encontra o indice de um elemento
+        // console.log('--------------')
+
+        // let cores = ['azul', 'amarelo', 'vermelho']
+        // console.log(cores.indexOf('vermelho'))
+
+        // //splice() - remove ou substitui elemetos
+
+        // //console.log(cores.splice(2,1))
+        // console.log(cores.splice(2,1))
+        // console.log(cores)
+
+        // //slice() - retorna parte de um array
+
+        // console.log(cores.slice(1,3))
+
+        // //map() - retorna um novo array modificado
+
+        // numeros = [40, 100, 1, 5, 25, 10]
+        // dobro = numeros.map(function(num){
+        //     console.log(num*2)
+        // })
+        
+
+        //filter() - filtra elementos com base em uma condicao
+        // let pares  = numeros.filter(function(num){
+        //     if(num % 2 === 0)
+        //       console.log(num)
+        // })
+
+        let nmrUser = parseInt(prompt("Digite Um numero"))
+
+        function verificarNumber(){
+
+            if (nmrUser >= 0){
+                alert('Numero positivo')
+            }else (alert('numero negativo'))
+            
+        }
+
+
+        verificarNumber()
+        
+    </script>
+</body>
+
+</html>

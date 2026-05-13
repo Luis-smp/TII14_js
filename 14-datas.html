@@ -1,36 +1,85 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Datas</title>
+    <title>Document</title>
 </head>
-
 <body>
+    <style>
+        body {
+            background-color: rgb(66, 66, 66);
+        }
+    </style>
+
     <script>
-        // objeto date
+    //    console.log(new Date(1991, 9, 13, 19, 5));
+       
+    //    console.log(new Date("1991-10-25T08:11:25Z"));
 
-        // o objetivo date e usado para representar datas e horarios. ele permite criar, manipular e formata
+    //    const DATA = new Date();
+    //    console.log(DATA.getFullYear());//ano atual
+    //    console.log(DATA.getMonth() + 1);//mes atual
+    //    console.log(DATA.getDate());//dia do mes
+    //    console.log(DATA.getDay());//dia da semana (0,1,2,3,4,5,6)
+    //    console.log(DATA.getHours());//horario atual
+    //    console.log(DATA.getMinutes());//minuto atual
+    //    console.log(DATA.getSeconds());//segundo atual
+    //    console.log(DATA.getMilliseconds());//milissegundo atual
+    //    console.log(DATA.getTime());//retorna o timestamp ( milesegundos desde primeiro de janeiro de 1970 - "Unix Epoch")
 
-        // data atual
-        console.log(new Date());
+        //TimeStamp
+        //O timestamp é um número que representa a quantidade de milissegundos desde 1° de janeiro de 1970
+        //(conhecido como "Unix Epoch")
+var timestamp = Date.now(); //retorna o timestamp atual
+        // console.log(timestamp);
 
-        console.log(new Date(1999, 10, 16, 8, 11, 25)); //16 de novembro de 1999, 08:11:25
-        console.log(new Date("1991-10-25T08:11:25Z"));
+        // var data = new Date(timestamp);
+        // console.log(data);
+        // 
 
-        const data = new Date();
+        //formatação de data
+        
+        // var dia = data.getDate();
+        // var mes = data.getMonth() + 1;
+        // var ano = data.getFullYear();
 
-        console.log(data.getFullYear()); //ano atual
-        console.log(data.getMonth()); // mes atual
-        console.log(data.getDate()); // Dia do mes
-        console.log(data.getDay()); // Dia da semana
-        console.log(data.getHours()); // Hora
-        console.log(data.getMinutes()); // Minutos
-        console.log(data.getSeconds()); // Segundos
-        console.log(data.getMilliseconds()); // milisegundos
-        console.log(data.getTime()); // retorna o timestamp (milissegundo desde 1º de janeiro de 1970 - 'Unix Epoch')
-    </script>
+        // console.log(`${dia}/${mes}/${ano}`);
+
+        //diferença entre datas
+        //você pode calcular a diferença entre duas datas subtraindo seus timestamp
+
+        // var data1 = new Date(2026, 6, 12);
+        // var data2 = new Date(2026, 6, 15);
+
+        // var diferenca = data2 - data1;
+        // console.log(diferenca);
+        
+        // var dia = diferenca / (1000 * 60 * 60 * 24);
+        // console.log(dia);
+
+        // console.log("------------------------------");
+
+        // let timestampDia = 86400000;
+        // let qtdDia = 5;
+        // let calculo = timestampDia * qtdDia;
+        // let dias = calculo / (1000 * 60 * 60 * 24);
+        // console.log(dias);
+
+        //fusos horários (Times zone)
+
+        let formatador = new Intl.DateTimeFormat(
+            'jp',
+            {
+                timeZone: 'Asia/Tokyo',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+            }
+        );
+        console.log(formatador.format(new Date()));
+        console.log(new Date().toLocaleDateString());
+
+    </script> 
 </body>
-
 </html>
